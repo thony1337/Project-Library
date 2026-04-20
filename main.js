@@ -1,4 +1,5 @@
 const myLibrary = [];
+const mainDiv = document.querySelector(".main-div");
 
 function book(name, author, pages) {
    this.name = name;
@@ -14,6 +15,24 @@ function addBookToLibrary(name, author, pages){
 function displayBook() {
  myLibrary.forEach(item => {
    console.table(item);
+   let mainContentDiv = document.querySelector('.main-div');
+   let content = document.createElement('div');
+
+   content.id = item.id;
+   content.classList.add('book');
+   mainContentDiv.appendChild(content);
+
+   let bookName = document.createElement('div');
+   content.appendChild(bookName);
+   bookName.textContent = "Book name: " + item.name;
+
+   let bookAuthor = document.createElement('div');
+   content.appendChild(bookAuthor);
+   bookAuthor.textContent = "Author: " + item.author;
+
+   let bookPages = document.createElement('div');
+   content.appendChild(bookPages);
+   bookPages.textContent = "Pages: " + item.pages;
  })
  }
 let book1 = addBookToLibrary('Mes confitures', 'Christine Ferber', '300');
