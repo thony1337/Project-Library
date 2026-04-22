@@ -8,7 +8,34 @@
     <script src="main.js" defer></script>
 </head>
 <body>
+ <div class="add-new-book"><button class="button">Add New Book</button></div>
+ <div class="teste2"></div> 
     <div class="main-div">
     </div>
+    <dialog id="dialog">
+        <form method="dialog">
+            <p> 
+                <label>
+                    Title :
+                    <input type="text" required class="title-input">
+                </label>
+            </p>
+                        <p> 
+                <label>
+                    Author :
+                    <input type="text" required class="author-input">
+                </label>
+            </p>
+                        <p> 
+                <label>
+                    Number of Pages :
+                    <input type="text" required class="pages-input">
+                </label>
+            </p>
+            <div></div>
+            <button value="cancel">Cancel</button>
+            <button id='ConfirmBtn' value="default">Confirm</button>
+        </form>                                                                                 
+    </dialog>
 </body>
 </html>

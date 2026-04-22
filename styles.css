@@ -1,9 +1,21 @@
 body {
  height: 100vh;
- display: flex;
+ display: grid;
  align-items: center;
  justify-content: center;
-
+ grid-row: 1fr 1fr;
+}
+.add-new-book {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-new-book > button {
+   width: 300px;
+   height: 100px;
+   
 }
 .main-div {
   height: 70%;
@@ -18,7 +30,7 @@ body {
 .main-div > .book {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
   padding: 10px;
   align-items: center;
   justify-content: center;

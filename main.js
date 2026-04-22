@@ -24,7 +24,7 @@ function displayBook() {
 
    let bookName = document.createElement('div');
    content.appendChild(bookName);
-   bookName.textContent = "Book name: " + item.name;
+   bookName.textContent = "Title: " + item.name;
 
    let bookAuthor = document.createElement('div');
    content.appendChild(bookAuthor);
@@ -33,6 +33,12 @@ function displayBook() {
    let bookPages = document.createElement('div');
    content.appendChild(bookPages);
    bookPages.textContent = "Pages: " + item.pages;
+
+   let removeBookButton = document.createElement('button');
+   content.appendChild(removeBookButton);
+   removeBookButton.textContent = "Remove Book";
+   removeBookButton.addEventListener('click', (event) => {
+   })
  })
  }
 let book1 = addBookToLibrary('Mes confitures', 'Christine Ferber', '300');
@@ -41,3 +47,29 @@ let book3 = addBookToLibrary('Flordelis a pastora do diabo', 'Ulisses Campbell',
 let book4 = addBookToLibrary('Elize Matsunaga', 'Ulisses Campbell', '150');
 let book5 = addBookToLibrary('Learning how to learn', 'Barbara Oakley', '200');
 displayBook();
+
+let dialog = document.querySelector('dialog');
+const button = document.querySelector('.button');
+const form = document.querySelector('form');
+let nameInput = document.querySelector('.title-input');
+let authorInput = document.querySelector('.author-input');
+let pagesInput = document.querySelector('.pages-input');
+let output = document.querySelector('.teste2');
+const confirmBtn = document.querySelector('#confirmBtn');
+
+
+button.addEventListener('click', () => {
+  dialog.showModal();
+  dialog
+})
+dialog.addEventListener('close', () => {
+   myLibrary.length = 0;
+   addBookToLibrary(nameInput.value, authorInput.value, pagesInput.value);
+   displayBook();
+   console.log(dialog.returnValue);
+   console.log(myLibrary);
+})
+confirmBtn.addEventListener('click', (event) => {
+   event.preventDefault();
+   dialog.close();
+})
