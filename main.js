@@ -17,7 +17,7 @@ function displayBook() {
    console.table(item);
    let mainContentDiv = document.querySelector('.main-div');
    let content = document.createElement('div');
-
+   
    content.id = item.id;
    content.classList.add('book');
    mainContentDiv.appendChild(content);
@@ -37,7 +37,17 @@ function displayBook() {
    let removeBookButton = document.createElement('button');
    content.appendChild(removeBookButton);
    removeBookButton.textContent = "Remove Book";
-   removeBookButton.addEventListener('click', (event) => {
+   removeBookButton.addEventListener('click', () => {
+   let itemId = item.id;
+   const index = myLibrary.findIndex(itemToRemove => itemToRemove.id === itemId);
+   myLibrary.splice(index, 1);
+   const element = document.getElementById(itemId);
+   if (element) {
+        element.remove();
+    }
+   console.log(myLibrary);
+   console.log(index);
+   console.log(item.id);
    })
  })
  }
