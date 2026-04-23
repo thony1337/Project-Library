@@ -1,4 +1,3 @@
-# Project-Library
 # Project Library 
 
 A simple library management web app built with HTML, CSS, and JavaScript.
