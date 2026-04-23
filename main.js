@@ -49,6 +49,12 @@ function displayBook() {
    console.log(index);
    console.log(item.id);
    })
+   const label = document.createElement('label');
+   content.appendChild(label);
+   label.textContent = 'read:  ';
+   const checkbox = document.createElement('input');
+   checkbox.type = "checkbox";
+   label.appendChild(checkbox);
  })
  }
 let book1 = addBookToLibrary('Mes confitures', 'Christine Ferber', '300');
