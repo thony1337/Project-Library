@@ -1,14 +1,16 @@
 const myLibrary = [];
 const mainDiv = document.querySelector(".main-div");
 
-function book(name, author, pages) {
+ class Book {
+  constructor(name, author, pages) {
    this.name = name;
    this.author = author;
    this.pages = pages;
    this.id = crypto.randomUUID();
+   }
 }  
 function addBookToLibrary(name, author, pages){
-  let a =  new book(name, author, pages);
+  let a =  new Book(name, author, pages);
   myLibrary.push(a);
   return a;
 }
