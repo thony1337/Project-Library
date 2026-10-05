@@ -1,7 +1,7 @@
 # Project Library 
 
 A simple library management web app built with HTML, CSS, and JavaScript.
-
+Live PREVIEW: https://thony1337.github.io/Project-Library/
 ## About
 
 This project was created as part of The Odin Project curriculum to practice JavaScript object constructors, DOM manipulation, and event handling.
